@@ -31,11 +31,5 @@ class Scrape:
         linked_list = list(zip(self.find_soup(link), self.find_soup_url(link)))
         return linked_list
 
-    def save_scrape(self, link):
-        """Saves the scrapped material as a text file"""
-        with open('scrape.txt', 'w', newline='') as file:
-            writer = csv.writer(file)
-            for data in self.zip_soup(link):
-                writer.writerow(data)
 
 
